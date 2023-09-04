@@ -215,15 +215,18 @@ header{
 #current{
    font-weight: 600; 
 }
-.leag h1{
+.leag{
     color: white;
+    font-weight: 600; 
+
+}
+.leag h1{
+    /* color: white; */
    font-weight: 600; 
    font-size: 20px;
 
 }
-#leag-h1{
-    margin-top: 30px;
-}
+
 .pic img{
     width: 60px;
 }

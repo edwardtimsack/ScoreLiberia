@@ -4,7 +4,7 @@ let wrapper = document.querySelector('.wrapper');
 let aside = document.querySelector('.one');
 let asideTitle = document.querySelector('.one h1');
 let asideSelect = document.querySelector('.one select');
-let todayMatch = document.querySelector('.today_match')
+// let todayMatch = document.querySelector('.today_match')
 let liveMatches = document.querySelector('.live_matches');
 let liveButton = document.querySelector('.live_matches button');
 
@@ -30,6 +30,7 @@ let tableIcon = document.querySelectorAll('.table i');
 // let point = document.querySelector('.point');
 // leagueTitle.innerHTML = "League Table"
 let target = document.querySelector('.teams')
+const currentMatch = document.querySelector('.today_match');
 
 const leagueTable = [
     {
@@ -73,7 +74,7 @@ const leagueTable = [
         points: 39
     },
     {
-        posititon: 5,
+        position: 5,
         clubName: "Heaven Eleven",
         clubLogo: './img/Heaven Eleven1.png',
         gameWon: 10,
@@ -175,6 +176,87 @@ const leagueTable = [
 ]
 
 
+const Fixtures = [
+    {
+        id: 1,
+        date: '2023-06-02',
+        time: '3:00pm',
+        stadium: "Samuel Kanyon Doe Sports Stadium",
+        homeTeam: {
+            teamName: 'LISCR',
+            score: 3,
+            playerScore: 'Jim',
+            playerAssist: 'Tim',
+        },
+        awayTeam: {  // Corrected placement of awayTeam
+            teamName: 'BYC',
+            score: 2,
+            playerScore: 'James',
+            playerAssist: 'Ben'
+        },
+        leagueName: 'LFA'
+    },
+    {
+        id: 2,
+        date: '2023-06-04',
+        time: '1:00pm',
+        stadium: "Samuel Kanyon Doe Sports Stadium",
+        homeTeam: {
+            teamName: 'Bea Mount',
+            score: 1,
+            playerScore: 'Oscar',
+            playerAssist: 'Albin',
+        },
+        awayTeam: {  // Corrected placement of awayTeam
+            teamName: 'Jubilee',
+            score: 3,
+            playerScore: 'Nathan',
+            playerAssist: 'James'
+        },
+        leagueName: 'LFA'
+    },
+    {
+        id: 3,
+        date: '2023-06-04',
+        time: '4:00pm',
+        stadium: "Antionette Tubman Stadium",
+        homeTeam: {
+            teamName: 'Wantaga',
+            score: 0,
+            playerScore: 'Ben',
+            playerAssist: 'Dave',
+        },
+        awayTeam: {  // Corrected placement of awayTeam
+            teamName: 'BYC',
+            score: 2,
+            playerScore: 'Albin',
+            playerAssist: 'Emmanuel'
+        },
+        leagueName: 'LFA'
+    },
+    {
+        id: 4,
+        date: '2023-06-07',
+        time: '6:20pm',
+        stadium: "Samuel Kanyon Doe Sports Stadium",
+        homeTeam: {
+            teamName: 'Nimba United',
+            score: 3,
+            playerScore: 'Tom',
+            playerAssist: 'Tuazama',
+        },
+        awayTeam: {  // Corrected placement of awayTeam
+            teamName: 'Cece United',
+            score: 2,
+            playerScore: 'Leon',
+            playerAssist: 'Bess'
+        },
+        leagueName: 'LFA'
+    },
+
+];
+
+
 function displayLeague() {
     for (let i = 0; i < leagueTable.length; i++) {
         const aboutTeam = document.createElement('div');
@@ -199,7 +281,7 @@ function displayLeague() {
         aboutTeam.appendChild(ranks);
         aboutTeam.appendChild(teamNames);
         aboutTeam.appendChild(win);
-        aboutTeam.appendChild(draw);
+        aboutTeam.appendChild(draw)
         aboutTeam.appendChild(loss);
         aboutTeam.appendChild(gamePlayed);
         aboutTeam.appendChild(gamePoints);
@@ -210,6 +292,35 @@ function displayLeague() {
 }
 
 displayLeague();
+
+
+function onGoingMatch() {
+    const todayLeague = document.querySelector('')
+}
+
+const lfaBox = document.querySelector('.today_match')
+function lfaDIvision() {
+    const me = document.createElement('h1');
+    me.textContent = "hello";
+    today_match.appendChild(me);
+    const lfaDiv = document.createElement('div');
+    const lfaLogo = document.createElement('div');
+    const leag = document.createElement('div');
+    const leagName = document.createElement('h1');
+    const leagMatch = document.createElement('p');
+
+    lfaDiv.classList.add('team');
+
+    leagName.innerHTML = 'LFA First Division'
+    leagMatch.innerHTML = 'English - 3 Matches'
+
+    leag.classList.add('leag')
+    leag.appendChild(leagName);
+    leag.appendChild(leagMatch);
+    lfaBox.appendChild(lfaDiv)
+
+    
+}
 
 
 // function createOption(){
